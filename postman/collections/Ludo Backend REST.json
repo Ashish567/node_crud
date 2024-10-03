@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "New Folder",
+			"name": "eNTITY",
 			"item": [
 				{
 					"name": "New Request",
@@ -17,6 +17,21 @@
 					},
 					"request": {
 						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"id": "f5898c8a-ba31-4d74-b02f-32b10b093241",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
 						"header": [],
 						"url": {
 							"raw": ""
