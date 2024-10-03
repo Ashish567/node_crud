@@ -35,7 +35,8 @@
 						"header": [],
 						"url": {
 							"raw": ""
-						}
+						},
+						"description": "### Add New Item\n\nThis endpoint allows you to add a new item by sending a POST request to the specified URL.\n\n#### Request Body\n\n- `itemName` (text): The name of the item to be added.\n    \n- `itemDescription` (text): A description of the item.\n    \n\n#### Response\n\nUpon successful addition of the item, the response will include the ID of the newly added item along with a success message. In case of any error, an appropriate error message will be returned."
 					},
 					"response": []
 				}
