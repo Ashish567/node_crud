@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "21d1f3b2-1b06-4b84-afc3-88173c8bee0e",
+		"name": "Ludo Backend REST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "29542537-21d1f3b2-1b06-4b84-afc3-88173c8bee0e"
+	},
+	"item": [
+		{
+			"name": "New Folder",
+			"item": [
+				{
+					"name": "New Request",
+					"id": "5de358a1-6365-43ff-8d61-9b9556c50302",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "38bc2986-beb1-414a-9cb3-4aa2c2ed91f7"
+		},
+		{
+			"name": "Entities",
+			"item": [
+				{
+					"name": "Get Entities",
+					"id": "8c5f27b0-1519-4b43-86da-9a40e4c4de92",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "fa439424-0641-4543-87b6-df5866e43117"
+		},
+		{
+			"name": "Get Game Status",
+			"id": "1400fac3-0f10-4c0d-a1b3-5bd58e8793a6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/games/game-state?gameId=538cb851-049c-44f6-a318-4e4272e1eb5e",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"games",
+						"game-state"
+					],
+					"query": [
+						{
+							"key": "gameId",
+							"value": "538cb851-049c-44f6-a318-4e4272e1eb5e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"id": "29fda720-a5a0-48b7-b483-842fee5d0184",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"players\": [\r\n        {\r\n            \"name\": \"Player1\",\r\n            \"type\": \"HUMAN\",\r\n            \"pieceBoards\": [\r\n                {\r\n                    \"color\": \"BLUE\",\r\n                    \"pieces\": [\r\n                        {\r\n                            \"color\": \"BLUE\",\r\n                            \"number\": 1\r\n                        },\r\n                        {\r\n                            \"color\": \"BLUE\",\r\n                            \"number\": 2\r\n                        },\r\n                        {\r\n                            \"color\": \"BLUE\",\r\n                            \"number\": 3\r\n                        },\r\n                        {\r\n                            \"color\": \"BLUE\",\r\n                            \"number\": 4\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"name\": \"Player2\",\r\n            \"type\": \"HUMAN\",\r\n            \"pieceBoards\": [\r\n                {\r\n                    \"color\": \"RED\",\r\n                    \"pieces\": [\r\n                        {\r\n                            \"color\": \"RED\",\r\n                            \"number\": 1\r\n                        },\r\n                        {\r\n                            \"color\": \"RED\",\r\n                            \"number\": 2\r\n                        },\r\n                        {\r\n                            \"color\": \"RED\",\r\n                            \"number\": 3\r\n                        },\r\n                        {\r\n                            \"color\": \"RED\",\r\n                            \"number\": 4\r\n                        }\r\n                    ]\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"gameName\": \"Ludo\",\r\n    \"createdBy\":\"7678789\",\r\n    \"noOfPlayers\":\"2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8081/games/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"games",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Join Game",
+			"id": "ef22576e-e84f-4736-8541-c46aff3f4649",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8081/games/join?gameId=123&playerName=JohnDoe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"games",
+						"join"
+					],
+					"query": [
+						{
+							"key": "gameId",
+							"value": "123"
+						},
+						{
+							"key": "playerName",
+							"value": "JohnDoe"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
